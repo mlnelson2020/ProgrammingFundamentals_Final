@@ -1,0 +1,22 @@
+/* background for full screen, change font and size */
+body {
+  background: rgba(221, 220, 127, 0.63);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+/* indent header */
+h2 {
+  padding: 10px;
+}
+
+/* format content pad for indentation, overflow and sizing to continue down page */
+#content {
+  padding: 10px;
+  overflow-y: auto;  
+}
+
+/* format input textbox */
+#input {
+  width: 100px;
+  background: whitesmoke;
+}

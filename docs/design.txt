@@ -1,0 +1,247 @@
+Programming Fundamentals: Mary Nelson
+
+Problem Statement:
+Create a program that first takes input of a user's name and then prompts them to type in a series of options to explore a park for a relaxing walk. The program will switch through various locations depending on what option the user selected previously and display the results with next options. 
+
+1. NOUNS AND VERBS:
+Problem Statement:
+Create a program that first takes input of a user's name and then prompts them to type in a series of options to explore a park for a relaxing walk. The program will use a switch to move through various locations depending on what option the user selected previously and output the results with next options.
+
+NOUNS: name, park, options(buttons), results
+	
+VERBS: input, type, prompt, switch/move, output 
+
+
+2. DEFINING DIAGRAM:
+
+INPUTS:
+  username
+  options
+
+PROCESSING:
+  initialize username
+  assign input
+  assign output
+  initialize eventListener
+  initialize areas
+
+  enter username
+    if username null 
+      alert user
+      prompt username
+  initialize currentLocation to arrive
+   
+  display output
+  output +=
+
+OUTPUTS:
+  output+=
+  currentLocation
+
+
+3. PSEUDOCODE:
+
+WalkInThePark
+  prompt for username
+    if username.length = 0
+      alert = Enter a name to continue
+      prompt username
+  listen for Enter press
+  
+  display initial location 
+
+  create areas
+	display description
+        display options
+        
+  
+  IF loc = forest THEN
+    newLocation = forest
+    ELSE IF loc = garden THEN
+    newLocation = garden
+    ELSE IF loc = fence THEN
+    newLocation = fence
+    ELSE IF loc = continue THEN
+    newLocation = continue
+    ELSE IF loc = walk THEN
+    newLocation = walk
+    ELSE IF loc = rest THEN
+    newLocation = rest
+    ELSE IF loc = labyrinth THEN
+    newLocation = labyrinth
+    ELSE IF loc = stop THEN
+    newLocation = stop
+    ELSE IF loc = linger THEN
+    newLocation = linger
+    ELSE IF loc = car THEN
+    newLocation = car
+    ELSE IF loc = restart THEN
+    restart page
+    DEFAULT = "Try again" + loc + "is not a valid option"
+   
+  add output
+  display output to screen
+
+END
+
+
+4. TEST PLANS:
+VARIABLES: name, input
+
+TEST PLAN 1:
+
+  INPUT VALUES: Mary, forest
+
+  EXPECTED RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+  ACTUAL RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+
+TEST PLAN 2:
+
+  INPUT VALUES: no entry on username, garden
+
+  EXPECTED RESULT: 
+
+It's been a long week, . You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+You wonder who maintains the gardens here. They're always immaculate every time you visit. Do you want to stop and sit on a bench, or go to the labyrinth?
+
+Type: stop or labyrinth
+
+  ACTUAL RESULT: 
+
+It's been a long week, . You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+You wonder who maintains the gardens here. They're always immaculate every time you visit. Do you want to stop and sit on a bench, or go to the labyrinth?
+
+Type: stop or labyrinth
+
+	** I tried to validate entry of username but my alert was running regardless if the username was populated or left null. I ran out of time trying to fix it. 
+
+TEST PLAN 3:
+
+  INPUT VALUES: Mary, forest, fence, restart
+
+  EXPECTED RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+You noticed part of the fence was broken and tried to adjust it so someone wouldn't get injured. However, you cut your hand on barbed wire in the process. You better get back to the car. Better luck next weekend.
+
+Type: restart to try again
+ 	**window reloads to start over
+
+  ACTUAL RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+You noticed part of the fence was broken and tried to adjust it so someone wouldn't get injured. However, you cut your hand on barbed wire in the process. You better get back to the car. Better luck next weekend.
+
+Type: restart to try again
+ 	**window reloads to start over
+
+
+TEST PLAN 4:
+
+  INPUT VALUES: Mary, forest, continue, walk, car
+
+  EXPECTED RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+There's a bench just up ahead that overlooks the valley. Sit for a while?
+
+Type: rest or walk
+
+Oh wow! There is a doe and her two fawns feeding just off the trail ahead of you. You stop for a moment to quietly observe them before returning to your car so they can continue undisturbed.
+
+Type: car
+
+I hope found a moment of tranquility here at the park today, Mary.
+
+Please type restart to begin again or exit now. 
+
+  ACTUAL RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+There's a bench just up ahead that overlooks the valley. Sit for a while?
+
+Type: rest or walk
+
+Oh wow! There is a doe and her two fawns feeding just off the trail ahead of you. You stop for a moment to quietly observe them before returning to your car so they can continue undisturbed.
+
+Type: car
+
+I hope found a moment of tranquility here at the park today, Mary.
+
+Please type restart to begin again or exit now.
+
+
+TEST PLAN 5:
+
+  INPUT VALUES: Mary, flowers, forest
+
+  EXPECTED RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+Try again: flowers is not a valid option.
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+  ACTUAL RESULT: 
+It's been a long week, Mary. You crushed it, but you're mentally wrecked. You've just arrived at your favorite park to enjoy some time in nature and decompress. Which way do you want to go today?
+
+Type: forest or garden
+
+Try again: flowers is not a valid option.
+
+The forest is so quiet today. This is exactly what you were looking for. All you can hear are birds chirping and rustling leaves as squirrels gather food to stash for winter. Keep walking, or inspect the fence next to the trail.
+
+Type: continue or fence
+
+	** I believe I exhausted testing all options for paths through the game without errors**
+
