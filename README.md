@@ -1,6 +1,6 @@
 # ProgrammingFundamentals_Final
 
-This is a prototype website I did to learn Git and GitHub
+A JavaScript-based interactive program where users can virtually explore a park for a relaxing walk. The program takes the user's name, guides them through various park locations, and offers different options to continue the journey based on their previous choices.
 
 ## Author
 
